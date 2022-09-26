@@ -1,7 +1,9 @@
-export function Input({childres, ...props}) {
+export function Input({ childres, ...props }) {
   return (
-    <input {...props} className="border-2 rounded-2xl border-blue-400 p-2 px-4 my-2" />
-  )
-
-
+    <input
+      {...props}
+      className="border rounded-2xl border-gray-500 p-2 px-4 my-2 hover:border 
+      hover:border-saciblue focus:border-2 focus:border-saciblue focus:outline-none"
+    />
+  );
 }
