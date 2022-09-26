@@ -4,7 +4,14 @@ import "./App.css";
 import SACIAPP from "./SaciApp.svg";
 import { Input } from "./components/input";
 import { CardImage } from "./components/cardImage";
-import { CHECKSVG, CLOCKSVG, LOCATIONSVG, MAILSVG, PHONESVG, WHATSAPP } from "./components";
+import {
+  CHECKSVG,
+  CLOCKSVG,
+  LOCATIONSVG,
+  MAILSVG,
+  PHONESVG,
+  WHATSAPP,
+} from "./components";
 import { CardContact } from "./components/cardContact";
 const urlimage1 = `https://www.saci-erp.com/wp-content/uploads/2022/04/saci_img_16-min.jpg`;
 const urlimage2 = `https://www.saci-erp.com/wp-content/uploads/2022/05/saci_img_27-min.jpg`;
@@ -28,36 +35,52 @@ function App() {
   };
   return (
     <div className="min-h-screen min-w-full">
-      <nav class="fixed flex items-center min-w-full justify-between flex-wrap bg-teal p-6 px-12 bg-gradient-to-r from-white to-saciblue">
-        <div class="flex items-center flex-no-shrink text-white mr-6">
-          <img src={SACIAPP} alt="SACIAPP" width="100" height="100" />
-        </div>
-        <div className="flex justify-end items-end">
-          <a href="#">
-            <WHATSAPP className="w-7 h-7 fill-black hover:fill-green-600 hover:w-8 hover:h-8 cursor-pointer" />
-          </a>
-        </div>
-        <div class="w-auto flex-grow flex items-center ">
-          <div class="text-sm flex-grow"></div>
-          <div>
-            <a
-              href="#"
-              class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:text-teal hover:bg-white mt-0"
-            >
-              Login
+      <nav className="fixed  z-50 w-full p-5 px-5 md:px-16 bg-gradient-to-r from-white to-saciblue">
+        <div className="flex justify-between w-auto">
+          <div className="flex items-center text-white">
+            <a href="#">
+              <img
+                src={SACIAPP}
+                alt="SACIAPP"
+                className="h-4 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+              />
             </a>
+          </div>
+          <div className="flex">
+            <div className="mr-5">
+              <a href="https://wa.link/ogkq14" target="_blank" rel="noreferrer">
+                {/* <WHATSAPP className="w-7 h-7 fill-white hover:fill-green-600 hover:w-8 hover:h-8 cursor-pointer" /> */}
+                <div className="transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 bg-green-500 rounded-full p-2 w-auto flex justify-center">
+                  <WHATSAPP className=" w-5 h-5 fill-white" />
+                </div>
+              </a>
+            </div>
+            <div className="">
+              <div className="text-sm"></div>
+              <div>
+                <a
+                  href="#"
+                  className="inline-block transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 text-sm px-4 py-2 leading-none border rounded bg-red-600 text-white border-red-600 hover:border-transparent  hover:text-teal  mt-0"
+                >
+                  Login
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
+
       <div
-        class="grid grid-cols-1 md:grid-cols-2 w-full text-6xl items-center min-h-screen bg-cover "
-        style={{ backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 105, 0.9)),url(${ulrimage5})` }}
+        className="bg-fixed grid grid-cols-1 md:grid-cols-2 w-full text-6xl items-center min-h-screen md:bg-cover "
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 105, 0.9)),url(${ulrimage5})`,
+        }}
       >
         <div className="text-3xl md:text-4xl text-center font-black pt-20 md:pt-0 px-10 text-gray-100">
           Utilízala gratis e ilimitadamente todo el 2022. ¡Sin planes, ni
           contratos!
         </div>
-        <div className="grid grid-cols-1 text-base text-center bg-white text-black rounded-lg py-5 px-16 mx-5 my-2 md:mx-16">
+        <div className="fade-in-bottom z-10 grid grid-cols-1 text-base text-center bg-white text-black rounded-lg py-5 px-16 mx-5 my-2 md:mx-16">
           <div className="text-xl font-bold text-start mb-5">
             Solicitar un DEMO
           </div>
@@ -65,7 +88,7 @@ function App() {
           <Input placeholder="Ciudad" type="text" />
           <Input placeholder="Correo" type="text" />
           <Input placeholder="Teléfono" type="text" />
-          <button className="bg-red-600 text-white font-semibold rounded-2xl py-2 px-4 md:mt-5">
+          <button className="bg-red-600 text-white font-semibold rounded-2xl py-2 px-4 md:mt-5 hover:bg-red-700">
             Solicitar Información
           </button>
         </div>
@@ -160,7 +183,9 @@ function App() {
           SVG={LOCATIONSVG}
         />
       </div>
-      <footer className="text-center my-10">© Copyright 2020 SaciAPP. All Rights Reserved.</footer>
+      <footer className="text-center my-10">
+        © Copyright 2020 SaciAPP. All Rights Reserved.
+      </footer>
     </div>
   );
 }
