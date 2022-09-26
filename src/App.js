@@ -50,8 +50,8 @@ function App() {
         </div>
       </nav>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 w-full text-6xl items-center min-h-screen bg-cover"
-        style={{ backgroundImage: `url(${ulrimage5})` }}
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-6xl items-center min-h-screen bg-cover "
+        style={{ backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 105, 0.9)),url(${ulrimage5})` }}
       >
         <div className="text-3xl md:text-4xl text-center font-black pt-20 md:pt-0 px-10 text-gray-100">
           Utilízala gratis e ilimitadamente todo el 2022. ¡Sin planes, ni
