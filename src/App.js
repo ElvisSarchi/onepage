@@ -123,7 +123,7 @@ function App() {
             Incluye App móvil nativa y acceso al Portal web
           </div>
         </div>
-        <div className="col-span-2 flex border-2 border-black p-5 rounded-xl text-center justify-center md:mx-10">
+        <div className="col-span-2 flex border-2 border-saciblue p-5 rounded-xl text-center justify-center md:mx-10">
           <table class="table-auto">
             <thead className="bg-saciblue text-white">
               <tr>
